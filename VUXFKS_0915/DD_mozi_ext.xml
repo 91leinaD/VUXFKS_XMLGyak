@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<mozi>
+    <filmek>
+        <film id = "txn_nxm_2jb" mufaj="horror">
+            <rendezo id="nzk_4xm_2jb" nev="alex"/>
+            <szinesz id="u5q_4xm_2jb" nev="Madison_Ivy"/>
+            <iro id="trv_4xm_2jb"/>
+            <producer id="sdf_4xm_2jb" nev="Walker_Parkes"/>
+            <dramaturg id="ptr_4xm_2jb" nev="Craig_Wood"/>
+            <operator id="xcv_4xm_2jb" nev="Ehren_Kruger"/>
+        </film>
+        <film id = "3fk_3et_g43" mufaj="fantasy">
+            <rendezo id="nvk_srx_4fe" nev="Peter_Jackson"/>
+            <szinesz id="ubf_cdt_grh" nev="Elijah_Wood"/>
+            <iro id="tbv_jhm_cxs" nev="J.R.R._Tolkien"/>
+            <producer id="hkh_ppz_ogk" nev="Peter_Jackson"/>
+            <dramaturg id="xnj_tio_grh" nev="Peter_Jackson"/>
+            <operator id="j6k_o3d_2fq" nev="Andrew_Lesnie"/>
+        </film>
+    </filmek>
+</mozi>

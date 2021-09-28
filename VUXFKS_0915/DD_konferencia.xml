@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<konferencia>
+    <cim>Rákóczi út 1.</cim>
+    <hallgatok>
+        <hallgato>
+            <nev>Polgár Jenő</nev>
+            <lakcim>3100 Salgótarján, Arany János út 10.</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Tóth Mária</nev>
+            <lakcim>3529 Miskolc, Szentgyörgyi út 23.</lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin>3/2.</helyszin>
+    <eloado>
+        <nev>Szűcs Ferenc</nev>
+        <adoszam>4443-21-55</adoszam>
+        <lakcim>1052 Budapest, Petőfi út 4.</lakcim>
+    </eloado>
+    <datum>2021.09.28.</datum>
+</konferencia>
