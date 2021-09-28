@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <title>Űrlap</title>
+
+        <style>
+            body {background-color: #0099FF; font-family: Arial;}
+            label {font-weight: bold;}
+            input {margin: 10px;}
+        </style>
+
+    </head>
+
+    <body>  
+    
+        <form action="feldolgozo.php" method="post" >
+            <br>
+            <label for="nev">Név:</label>
+            <input type="text" id="nev" name="nev" placeholder="Írd be a neved" value="" > <br>
+            <label for="pinkod">PIN kód:</label>
+            <input type="password" id="pinkod" name="kod" placeholder="Írd be a PIN kódod" value="" > <br>
+            <label for="gyumolcs">Kedvenc gyümölcs:</label>
+            <input type="text" id="gyumolcs" name="gyumolcs" value="" > <br>
+            <label for="eletkor">Életkor:</label>
+            <input type="text" id="eletkor" name="eletkor" value="" style="width:40px"> <br>
+            <label for="labmeret">Lábméret:</label>
+            <input type="text" id="labmeret" name="labmeret" value="" style="width:70px"> <br>
+            <label for="onbizalom">Önbizalom:</label> 
+            0<input type="range" name="onbizalom" min="0" max="100" value="50" style="width:500px">100 <br><br><br>
+            <input type="submit" name="kuld" value="ELKÜLDÖM">
+            <input type="submit" name="kuld2" value="Elküldöm ellenőrzés nélkül">
+        </form>
+    </body>
+</html>
