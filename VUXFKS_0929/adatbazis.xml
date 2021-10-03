@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE adatbazis [
+        <!ELEMENT adatbazis (DOLGOZO*)>
+        <!ELEMENT DOLGOZO (nev, fizetes)>
+        <!ATTLIST DOLGOZO kod ID #REQUIRED>
+        <!ELEMENT nev (#PCDATA)>
+        <!ELEMENT fizetes (#PCDATA)>
+        ]>
+
+<adatbazis>
+    <DOLGOZO kod="x01">
+        <nev>X Péter</nev>
+        <fizetes>140000</fizetes>
+    </DOLGOZO>
+    <DOLGOZO kod="x02">
+        <nev>Y Károly</nev>
+        <fizetes>120000</fizetes>
+    </DOLGOZO>
+</adatbazis>

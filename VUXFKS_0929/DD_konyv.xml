@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE konyvek SYSTEM "DD_konyv.dtd">
+<konyvek>
+    <konyv id="x1">
+        <cim>elsocim</cim>
+        <kiadasev>1991</kiadasev>
+        <kiado>elsokiado</kiado>
+        <szerzo>elsoszerzo</szerzo>
+    </konyv>
+    <konyv id="x2">
+        <cim>masodikcim</cim>
+        <kiadasev>1992</kiadasev>
+        <kiado>masodikkiado</kiado>
+        <szerzo>masodikszerzo1</szerzo>
+        <szerzo>masodikszerzo2</szerzo>
+    </konyv>
+    <konyv id="x3">
+        <cim>harmadikcim</cim>
+        <kiadasev>1993</kiadasev>
+        <kiado>harmadikkiado</kiado>
+        <szerzo>harmadikszerzo</szerzo>
+    </konyv>
+</konyvek>
