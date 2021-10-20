@@ -8,7 +8,7 @@
             <!ELEMENT kakas (#PCDATA)>
             <!ATTLIST kakas id ID #REQUIRED>
             <!ELEMENT tyuk (#PCDATA)>
-            <!ATTLIST tyuk ferj CDATA #REQUIRED>
+            <!ATTLIST tyuk ferj IDREF #IMPLIED>
             <!ELEMENT roka EMPTY>
             <!ELEMENT diszno (#PCDATA)>
             <!ATTLIST diszno nev CDATA #REQUIRED>
