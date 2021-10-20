@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minta xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+         xsi:noNamespaceSchemaLocation="DD_ertoxsd.xsd">
+
+    <A Aa="a01">
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+    <A Aa="a02">
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+    <B Ba="b01" Bc="c01">
+        <Bb>
+            <Bbx></Bbx>
+            <Bby></Bby>
+        </Bb>
+    </B>
+    <C Ca="c01">
+        <Cb></Cb>
+    </C>
+    <A_B A_B_a="a01" A_B_b="b01">
+        <A_Bc></A_Bc>
+    </A_B>
+    <A_B A_B_a="a02" A_B_b="b01">
+        <A_Bc></A_Bc>
+    </A_B>
+</minta>
