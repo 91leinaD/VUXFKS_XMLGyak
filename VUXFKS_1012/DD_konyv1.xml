@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<konyvek xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+         xsi:noNamespaceSchemaLocation="DD_konyv1.xsd">
+	<konyv>
+		<cim>Harry Potter és a Bölcsek köve</cim>
+		<szerzo>J. K. Rowling</szerzo>
+		<szereplo>
+			<nev>Harry Potter</nev>
+			<baratja>Ron Weasley</baratja>
+			<szuletett>1980.07.31.</szuletett>
+			<jellemzes>Varázsló</jellemzes>
+		</szereplo>
+		<szereplo>
+			<nev>Hermione Granger</nev>
+			<szuletett>1979.09.19.</szuletett>
+			<jellemzes>Boszorkány</jellemzes>
+		</szereplo>
+	</konyv>
+	     
+</konyvek>

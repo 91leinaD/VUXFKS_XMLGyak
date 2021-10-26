@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+                xsi:noNamespaceSchemaLocation="nevjegykartya.xsd">
+    <nevjegykartya id="n1">
+        <nev>Dudás Dániel</nev>
+        <ceg>
+        	<nev>Tech-ER Kft.</nev>
+            <cim>
+                <iranyitoszam>3524</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Alkotmány utca</utca>
+                <hazszam>12</hazszam>
+            </cim>
+            <telefonszam >0630123456</telefonszam>
+            <weblap>www.techerkft.hu</weblap>
+        </ceg>
+        <beosztas>Szoftverfejlesztő</beosztas>
+        <telefonszam >0620123456</telefonszam>
+        <email>d.daniel910617@gmail.com</email>
+    </nevjegykartya>
+    
+    <nevjegykartya id="n2">
+        <nev>Horváth Péter</nev>
+        <ceg>
+        	<nev>Tech-ER Kft.</nev>
+            <cim>
+                <iranyitoszam>3524</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Alkotmány utca</utca>
+                <hazszam>12</hazszam>
+            </cim>
+            <telefonszam >0630123456</telefonszam>
+            <weblap>www.techerkft.hu</weblap>
+        </ceg>
+        <beosztas>Rendszergazda</beosztas>
+        <telefonszam >0620654321</telefonszam>
+        <email>horvath.peter@gmail.com</email>
+    </nevjegykartya>
+    
+</nevjegykartyak>

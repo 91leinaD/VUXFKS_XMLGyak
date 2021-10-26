@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="DD_konyv_mod.xsd"/>
+<xs:element name="konyv">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="cim" type="xs:string"/>
+            <xs:element name="szerzo" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="szereplo" type="szereplo_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="isbn" use="required" type="isbn_type"/>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
