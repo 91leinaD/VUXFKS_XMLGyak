@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <users xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="usersVUXFKS.xsd"> -->
+
+<users>
+	<user id="1">
+		<firstname>Dániel</firstname>
+		<lastname>Dudás</lastname>
+		<profession>xy</profession>
+	</user>
+	<user id="2">
+		<firstname>Tom</firstname>
+		<lastname>Denem</lastname>
+		<profession>nothing</profession>
+	</user>
+	<user id="3">
+		<firstname>John</firstname>
+		<lastname>Doe</lastname>
+		<profession>abc</profession>
+	</user>
+</users>
