@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <class xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="classVUXFKS.xsd"> -->
+
+<class>
+	<student id="01">
+		<keresztnev>Dániel</keresztnev>
+		<vezeteknev>Dudás</vezeteknev>
+		<becenev>Dani</becenev>
+		<kor>30</kor>
+	</student>
+	<student id="02">
+		<keresztnev>Béla</keresztnev>
+		<vezeteknev>Fehér</vezeteknev>
+		<becenev>nincs</becenev>
+		<kor>50</kor>
+	</student>
+	<student id="03">
+		<keresztnev>Sándor</keresztnev>
+		<vezeteknev>Fekete</vezeteknev>
+		<becenev>Sanyi</becenev>
+		<kor>43</kor>
+	</student>
+	
+</class>
