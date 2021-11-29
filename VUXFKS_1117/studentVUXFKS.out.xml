@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <table border="4">
+            <tr bgcolor="#9acd32">
+                <th>ID</th><th>Vezet&eacute;kn&eacute;v</th><th>Keresztn&eacute;v</th><th>Becen&eacute;v</th><th>Kor</th>
+            </tr>
+            <tr>
+                <td>01</td><td>Dud&aacute;s</td><td>D&aacute;niel</td><td>Dani</td><td>30</td>
+            </tr>
+            <tr>
+                <td>02</td><td>Feh&eacute;r</td><td>B&eacute;la</td><td>nincs</td><td>50</td>
+            </tr>
+            <tr>
+                <td>03</td><td>Fekete</td><td>S&aacute;ndor</td><td>Sanyi</td><td>43</td>
+            </tr>
+        </table>
+    </body>
+</html>

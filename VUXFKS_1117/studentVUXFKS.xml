@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "studentVUXFKS.xsl"?>
+<!--<?xml-stylesheet type = "text/xsl" href = "studentVUXFKS_apply.xsl"?> -->
+
+<class>
+	<student id="01">
+		<vezeteknev>Dudás</vezeteknev>
+		<keresztnev>Dániel</keresztnev>
+		<becenev>Dani</becenev>
+		<kor>30</kor>
+	</student>
+	<student id="02">
+		<vezeteknev>Fehér</vezeteknev>
+		<keresztnev>Béla</keresztnev>
+		<becenev>nincs</becenev>
+		<kor>50</kor>
+	</student>
+	<student id="03">
+		<vezeteknev>Fekete</vezeteknev>
+		<keresztnev>Sándor</keresztnev>
+		<becenev>Sanyi</becenev>
+		<kor>43</kor>
+	</student>
+	
+</class>

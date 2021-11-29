@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <h2>DD apple- template</h2>
+        	
+        <p>
+                    ID:
+        01
+            <br>
+                    Vezeteknev:
+        <span style="color:green">Dud&aacute;s</span>
+            <br>
+                    Keresztnev:
+        <span style="color:brown">D&aacute;niel</span>
+            <br>
+            Dani Kor:
+    <span style="color:blue">30</span>
+            <br>
+                    Fizetes:
+        <span style="color:red">600000</span>
+            <br>
+        </p>
+        	
+        <p>
+                    ID:
+        02
+            <br>
+                    Vezeteknev:
+        <span style="color:green">Kek</span>
+            <br>
+                    Keresztnev:
+        <span style="color:brown">Dora</span>
+            <br>
+            Dorka Kor:
+    <span style="color:blue">20</span>
+            <br>
+                    Fizetes:
+        <span style="color:red">550000</span>
+            <br>
+        </p>
+        	
+        <p>
+                    ID:
+        03
+            <br>
+                    Vezeteknev:
+        <span style="color:green">Zsoldos</span>
+            <br>
+                    Keresztnev:
+        <span style="color:brown">Andrea</span>
+            <br>
+            Andi Kor:
+    <span style="color:blue">18</span>
+            <br>
+                    Fizetes:
+        <span style="color:red">450000</span>
+            <br>
+        </p>
+        	
+
+    </body>
+</html>
