@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Cinemagic">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="mozik" type="mozik_type"/>
+                    <xs:element name="dolgoznak" type="dolgoznak_type"/>
+                    <xs:element name="eladok" type="eladok_type"/>
+                    <xs:element name="kivalasztottak" type="kivalasztottak_type"/>
+                    <xs:element name="jegyek" type="jegyek_type"/>
+                    <xs:element name="vasarlasok" type="vasarlasok_type"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <xs:key name="Mozi_PK">
+            <xs:selector xpath="mozik/mozi"/>
+            <xs:field xpath="@MoziID"/>
+        </xs:key>
+        <xs:key name="Elado_PK">
+            <xs:selector xpath="eladok/elado"/>
+            <xs:field xpath="@EladoID"/>
+        </xs:key>
+        <xs:key name="Jegy_PK">
+            <xs:selector xpath="jegyek/jegy"/>
+            <xs:field xpath="@JegyID"/>
+        </xs:key>
+        <xs:key name="Vasarlas_PK">
+            <xs:selector xpath="vasarlasok/vasarlas"/>
+            <xs:field xpath="@VasarlasID"/>
+        </xs:key>
+        
+        <xs:keyref name="Mozi_FK" refer="Mozi_PK">
+            <xs:selector xpath="dolgoznak/dolgozik"/>
+            <xs:field xpath="@Mozi_IDREF"/>
+        </xs:keyref>
+        <xs:keyref name="DElado_FK" refer="Elado_PK">
+            <xs:selector xpath="dolgoznak/dolgozik"/>
+            <xs:field xpath="@Elado_IDREF"/>
+        </xs:keyref>
+        <xs:keyref name="KElado_FK" refer="Elado_PK">
+            <xs:selector xpath="kivalasztottak/kivalaszt"/>
+            <xs:field xpath="@Elado_IDREF"/>
+        </xs:keyref>
+        <xs:keyref name="VElado_FK" refer="Elado_PK">
+            <xs:selector xpath="vasarlasok/vasarlas"/>
+            <xs:field xpath="@Elado_IDREF"/>
+        </xs:keyref>
+        <xs:keyref name="KJegy_FK" refer="Jegy_PK">
+            <xs:selector xpath="kivalasztottak/kivalaszt"/>
+            <xs:field xpath="@Jegy_IDREF"/>
+        </xs:keyref>
+        <xs:keyref name="VJegy_FK" refer="Jegy_PK">
+            <xs:selector xpath="vasarlasok/vasarlas"/>
+            <xs:field xpath="@Jegy_IDREF"/>
+        </xs:keyref>
+        
+    </xs:element>
+   
+   <xs:complexType name="mozik_type">
+        <xs:sequence>
+            <xs:element name="mozi" type="mozi_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+   <xs:complexType name="dolgoznak_type">
+        <xs:sequence>
+            <xs:element name="dolgozik" type="dolgozik_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="eladok_type">
+        <xs:sequence>
+            <xs:element name="elado" type="elado_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="kivalasztottak_type">
+        <xs:sequence>
+            <xs:element name="kivalaszt" type="kivalaszt_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="jegyek_type">
+        <xs:sequence>
+            <xs:element name="jegy" type="jegy_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="vasarlasok_type">
+        <xs:sequence>
+            <xs:element name="vasarlas" type="vasarlas_type" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+   
+    <xs:complexType name="mozi_type">
+        <xs:sequence>
+            <xs:element name="mozinev" type="xs:string"/>
+            <xs:element name="cim" type="cim_type"/>
+        </xs:sequence>
+        <xs:attribute name="MoziID" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="dolgozik_type">
+        <xs:sequence>
+            <xs:element name="elerheto" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="Mozi_IDREF" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="Elado_IDREF" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="elado_type">
+        <xs:sequence>
+            <xs:element name="fhsznev" type="xs:string"/>
+            <xs:element name="jelszo" type="xs:string"/>
+            <xs:element name="admin" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="EladoID" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="kivalaszt_type">
+        <xs:sequence>
+            <xs:element name="lefoglalt" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="Elado_IDREF" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="Jegy_IDREF" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="jegy_type">
+        <xs:sequence>
+            <xs:element name="vetites" type="xs:string"/>
+            <xs:element name="sor" type="xs:integer"/>
+            <xs:element name="oszlop" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="JegyID" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="vasarlas_type">
+        <xs:sequence>
+            <xs:element name="vidopont" type="vasarlasidopontType"/>
+        </xs:sequence>
+        <xs:attribute name="VasarlasID" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="Jegy_IDREF" type="xs:unsignedByte" use="required"/>
+        <xs:attribute name="Elado_IDREF" type="xs:unsignedByte" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="cim_type">
+        <xs:sequence>
+            <xs:element name="irszam" type="xs:integer"/>
+            <xs:element name="utca" type="xs:string"/>
+            <xs:element name="hazszam" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="vasarlasidopontType">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9][0-9][0-9][0-9].[0-9][0-9].[0-9][0-9]/[0-9][0-9]*:[0-9][0-9]"/>
+        </xs:restriction>
+      </xs:simpleType>
+     
+</xs:schema>    

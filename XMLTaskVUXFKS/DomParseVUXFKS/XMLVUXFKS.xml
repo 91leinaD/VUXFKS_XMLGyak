@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Cinemagic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaVUXFKS.xsd">
+	<mozik>
+		<mozi MoziID="01">
+			<mozinev>CinemaMiskolc</mozinev>
+			<cim>
+				<irszam>3500</irszam>
+				<utca>Rákóczi</utca>
+				<hazszam>15.</hazszam>
+			</cim>
+		</mozi>
+		<mozi MoziID="02">
+			<mozinev>CinemaBudapest</mozinev>
+			<cim>
+				<irszam>1100</irszam>
+				<utca>Fő</utca>
+				<hazszam>4.</hazszam>
+			</cim>
+		</mozi>
+		<mozi MoziID="03">
+			<mozinev>CinemaSalgótarján</mozinev>
+			<cim>
+				<irszam>3100</irszam>
+				<utca>Kiss</utca>
+				<hazszam>88.</hazszam>
+			</cim>
+		</mozi>
+	</mozik>
+	<dolgoznak>
+		<dolgozik Mozi_IDREF="01" Elado_IDREF="01" >
+			<elerheto>0</elerheto>
+		</dolgozik>
+		<dolgozik Mozi_IDREF="02" Elado_IDREF="02">
+			<elerheto>1</elerheto>
+		</dolgozik>
+		<dolgozik Mozi_IDREF="03" Elado_IDREF="03">
+			<elerheto>1</elerheto>
+		</dolgozik>
+	</dolgoznak>
+	<eladok>
+		<elado EladoID="01" >
+			<fhsznev>Béla05</fhsznev>
+			<jelszo>ujjelszo1</jelszo>
+			<admin>0</admin>
+		</elado>
+		<elado EladoID="02" >
+			<fhsznev>Anna01</fhsznev>
+			<jelszo>ujjelszo2</jelszo>
+			<admin>0</admin>
+		</elado>
+		<elado EladoID="03" >
+			<fhsznev>Judit08</fhsznev>
+			<jelszo>ujjelszo3</jelszo>
+			<admin>0</admin>
+		</elado>
+		<elado EladoID="04" >
+			<fhsznev>Péter04</fhsznev>
+			<jelszo>ujjelszo4</jelszo>
+			<admin>1</admin>
+		</elado>
+	</eladok>
+	<kivalasztottak>
+		<kivalaszt Elado_IDREF="03" Jegy_IDREF="01">
+			<lefoglalt>0</lefoglalt>
+		</kivalaszt>
+		<kivalaszt Elado_IDREF="02" Jegy_IDREF="02">
+			<lefoglalt>0</lefoglalt>
+		</kivalaszt>
+		<kivalaszt Elado_IDREF="03" Jegy_IDREF="04">
+			<lefoglalt>1</lefoglalt>
+		</kivalaszt>
+		<kivalaszt Elado_IDREF="02" Jegy_IDREF="06">
+			<lefoglalt>1</lefoglalt>
+		</kivalaszt>
+	</kivalasztottak>
+	<jegyek>
+		<jegy JegyID="01">
+			<vetites>01</vetites>
+			<sor>10</sor>
+			<oszlop>1</oszlop>
+		</jegy>
+		<jegy JegyID="02">
+			<vetites>01</vetites>
+			<sor>10</sor>
+			<oszlop>2</oszlop>
+		</jegy>
+		<jegy JegyID="03">
+			<vetites>01</vetites>
+			<sor>5</sor>
+			<oszlop>4</oszlop>
+		</jegy>
+		<jegy JegyID="04">
+			<vetites>01</vetites>
+			<sor>5</sor>
+			<oszlop>5</oszlop>
+		</jegy>
+		<jegy JegyID="05">
+			<vetites>02</vetites>
+			<sor>11</sor>
+			<oszlop>7</oszlop>
+		</jegy>
+		<jegy JegyID="06">
+			<vetites>02</vetites>
+			<sor>8</sor>
+			<oszlop>9</oszlop>
+		</jegy>
+	</jegyek>
+	<vasarlasok>
+		<vasarlas VasarlasID="01" Jegy_IDREF="05" Elado_IDREF="02">
+			<vidopont>2021.12.01/10:00</vidopont>
+		</vasarlas>
+		<vasarlas VasarlasID="02" Jegy_IDREF="03" Elado_IDREF="03">
+			<vidopont>2021.12.01/10:08</vidopont>
+		</vasarlas>
+	</vasarlasok>
+</Cinemagic>
