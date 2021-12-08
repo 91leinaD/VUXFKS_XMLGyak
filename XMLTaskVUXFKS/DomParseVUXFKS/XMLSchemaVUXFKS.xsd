@@ -3,14 +3,12 @@
 	<xs:element name="Cinemagic">
         <xs:complexType>
             <xs:sequence>
-                <xs:choice maxOccurs="unbounded">
                     <xs:element name="mozik" type="mozik_type"/>
                     <xs:element name="dolgoznak" type="dolgoznak_type"/>
                     <xs:element name="eladok" type="eladok_type"/>
                     <xs:element name="kivalasztottak" type="kivalasztottak_type"/>
                     <xs:element name="jegyek" type="jegyek_type"/>
                     <xs:element name="vasarlasok" type="vasarlasok_type"/>
-                </xs:choice>
             </xs:sequence>
         </xs:complexType>
         

@@ -18,27 +18,34 @@ public class DomReadVUXFKS {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
+     
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = factory.newDocumentBuilder();
 
+      
         File xmlFile = new File("XMLVUXFKS.xml");
         Document doc = dBuilder.parse(xmlFile);
 
         doc.getDocumentElement().normalize();
-
+        
         System.out.println("Root elem: " + doc.getDocumentElement().getNodeName());
 
+      
         NodeList nList = doc.getElementsByTagName("mozi");
+     
         for (int i = 0; i < nList.getLength(); i++) {
 
+          
             Node nNode = nList.item(i);
-            System.out.println("\nKivï¿½lasztott elem: " + nNode.getNodeName());
+            System.out.println("\nKiválasztott elem: " + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) nNode;
 
+              
                 String MoziID = elem.getAttribute("MoziID");
 
+              
                 Node n1 = elem.getElementsByTagName("mozinev").item(0);
                 String mozinev = n1.getTextContent();
 
@@ -50,12 +57,12 @@ public class DomReadVUXFKS {
 
                 Node n4 = elem.getElementsByTagName("hazszam").item(0);
                 String hazszam = n4.getTextContent();            
-
+             
                 System.out.println("Mozi azonosito: " + MoziID);
-                System.out.println("Mozinï¿½v: " + mozinev);
-                System.out.println("Irï¿½nyitï¿½szï¿½m: " + irszam);
+                System.out.println("Mozinév: " + mozinev);
+                System.out.println("Irányitószám: " + irszam);
                 System.out.println("Utca: " + utca); 
-                System.out.println("Hï¿½zszï¿½m: " + hazszam);
+                System.out.println("Házszám: " + hazszam);
             }
         }
 
@@ -63,7 +70,7 @@ public class DomReadVUXFKS {
         for (int i = 0; i < nList.getLength(); i++) {
 
             Node nNode = nList.item(i);
-            System.out.println("\nKivï¿½lasztott elem: " + nNode.getNodeName());
+            System.out.println("\nKiválasztott elem: " + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) nNode;
@@ -76,7 +83,7 @@ public class DomReadVUXFKS {
 
                 System.out.println("Mozi azonosito: " + Mozi_IDREF);
                 System.out.println("Dolgozik: " + elerheto);
-                System.out.println("Eladï¿½ azonositï¿½ja: " + Elado_IDREF);
+                System.out.println("Eladó azonositója: " + Elado_IDREF);
                 
             }
         }
@@ -85,7 +92,7 @@ public class DomReadVUXFKS {
         for (int i = 0; i < nList.getLength(); i++) {
 
             Node nNode = nList.item(i);
-            System.out.println("\nKivï¿½lasztott elem: " + nNode.getNodeName());
+            System.out.println("\nKiválasztott elem: " + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) nNode;
@@ -99,9 +106,9 @@ public class DomReadVUXFKS {
                 Node n3 = elem.getElementsByTagName("admin").item(0);
                 String admin = n3.getTextContent();
 
-                System.out.println("Elado azonositï¿½: " + EladoID);
-                System.out.println("Felhasznï¿½lï¿½nï¿½v: " + fhsznev);
-                System.out.println("Jelszï¿½: " + jelszo);
+                System.out.println("Elado azonositó: " + EladoID);
+                System.out.println("Felhasználónév: " + fhsznev);
+                System.out.println("Jelszó: " + jelszo);
                 System.out.println("Adminjog: " + admin);
             }
         }
@@ -110,7 +117,7 @@ public class DomReadVUXFKS {
         for (int i = 0; i < nList.getLength(); i++) {
 
             Node nNode = nList.item(i);
-            System.out.println("\nKivï¿½lasztott elem: " + nNode.getNodeName());
+            System.out.println("\nKiválasztott elem: " + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) nNode;
@@ -127,8 +134,8 @@ public class DomReadVUXFKS {
                 Node n3 = elem.getElementsByTagName("oszlop").item(0);
                 String oszlop = n3.getTextContent();
 
-                System.out.println("Jegy azonositï¿½ja: " + JegyID);
-                System.out.println("Vetitï¿½s: " + vetites);
+                System.out.println("Jegy azonositója: " + JegyID);
+                System.out.println("Vetités: " + vetites);
                 System.out.println("Sor: " + sor);
                 System.out.println("Oszlop: " + oszlop);
             }
@@ -138,7 +145,7 @@ public class DomReadVUXFKS {
         for (int i = 0; i < nList.getLength(); i++) {
 
             Node nNode = nList.item(i);
-            System.out.println("\nKivï¿½lasztott elem: " + nNode.getNodeName());
+            System.out.println("\nKiválasztott elem: " + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element elem = (Element) nNode;
@@ -148,12 +155,12 @@ public class DomReadVUXFKS {
                 String Elado_IDREF = elem.getAttribute("Elado_IDREF");
 
                 Node n1 = elem.getElementsByTagName("vidopont").item(0);
-                String vidopont = node1.getTextContent();
+                String vidopont = n1.getTextContent();
 
-                System.out.println("Vï¿½sï¿½rlï¿½si azonositï¿½: " + VasarlasID);
-                System.out.println("Vï¿½sï¿½rlï¿½s idï¿½pontja: " + vidopont);
-                System.out.println("Jegy azonositï¿½ja: " + Jegy_IDREF);
-                System.out.println("Eladï¿½ azonositï¿½ja: " + Elado_IDREF);
+                System.out.println("Vásárlási azonositó: " + VasarlasID);
+                System.out.println("Vásárlás idõpontja: " + vidopont);
+                System.out.println("Jegy azonositója: " + Jegy_IDREF);
+                System.out.println("Eladó azonositója: " + Elado_IDREF);
                 
             }
         }

@@ -26,11 +26,12 @@ public class DomQueryVUXFKS {
 
         doc.getDocumentElement().normalize();
 
-        System.out.println("Root elem: " + doc.getDocumentElement().getNodeName());
+        System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
 
-        System.out.println("\nAz ï¿½ppen dolgozï¿½ eladï¿½k adatai:");
+        System.out.println("\nAz éppen dolgozó eladók adatai:");
         NodeList eladolist = doc.getElementsByTagName("elado");
         NodeList dolgoziklist = doc.getElementsByTagName("dolgozik");
+        
         
         for (int i = 0; i < eladolist.getLength(); i++) {
 
@@ -49,8 +50,6 @@ public class DomQueryVUXFKS {
                 
                 Node n3 = elem.getElementsByTagName("admin").item(0);
                 String admin = n3.getTextContent();
-                
-                
          
 		         for (int j = 0; j < dolgoziklist.getLength(); j++) {
 		
@@ -66,9 +65,9 @@ public class DomQueryVUXFKS {
 		  
 			             if(EladoID.equals(Elado_IDREF) &&  elerheto.toString().contains("1")) {
 				        	 
-			            	 System.out.println("Eladï¿½ azonositï¿½ja: " + EladoID);
-			            	 System.out.println("Felhasznï¿½lï¿½nï¿½v: " + fhsznev);
-			            	 System.out.println("Jelszï¿½: " + jelszo);
+			            	 System.out.println("Eladó azonositója: " + EladoID);
+			            	 System.out.println("Felhasználónév: " + fhsznev);
+			            	 System.out.println("Jelszó: " + jelszo);
 			            	 System.out.println("Adminjog: " + admin);
 				         }
 		             
@@ -77,5 +76,127 @@ public class DomQueryVUXFKS {
         	}   
         }
         
+        System.out.println("\nAz elsõ vetitésre szóló jegyek részletei:");
+        NodeList jegylist = doc.getElementsByTagName("jegy");
+        
+        for (int i = 0; i < jegylist.getLength(); i++) {
+
+            Node nNode = jegylist.item(i);
+
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element elem = (Element) nNode;
+
+                String JegyID = elem.getAttribute("JegyID");
+
+                Node n1 = elem.getElementsByTagName("vetites").item(0);
+                String vetites = n1.getTextContent();
+
+                Node n2 = elem.getElementsByTagName("sor").item(0);
+                String sor = n2.getTextContent();
+                
+                Node n3 = elem.getElementsByTagName("oszlop").item(0);
+                String oszlop = n3.getTextContent();
+                
+                if (vetites.toString().contains("01")) {
+                	
+                	System.out.println("Jegy azonositója: " + JegyID);
+	            	System.out.println("sor: " + sor);
+	            	System.out.println("oszlop: " + oszlop);
+                	
+                
+                }
+		         
+        	}   
+        }
+        
+        System.out.println("\nAz eladott jegyek adatai, a jegyet eladó felhasználóneve és a mozi neve ahol történt az eladás:");
+        NodeList mozilist = doc.getElementsByTagName("mozi");
+        NodeList vasarlaslist = doc.getElementsByTagName("vasarlas");
+        
+        for (int i = 0; i < vasarlaslist.getLength(); i++) {
+
+            Node nNode = vasarlaslist.item(i);
+
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element elem = (Element) nNode;
+
+                String VasarlasID = elem.getAttribute("VasarlasID");
+                
+                String Jegy_IDREF = elem.getAttribute("Jegy_IDREF");
+                
+                String Elado_IDREF = elem.getAttribute("Elado_IDREF");
+
+                Node n1 = elem.getElementsByTagName("vidopont").item(0);
+                String vidopont = n1.getTextContent();
+                
+                
+         
+		         for (int j = 0; j < eladolist.getLength(); j++) {
+		
+		             Node nNode2 = eladolist.item(j);
+		
+		             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
+		                 Element elem2 = (Element) nNode2;
+		                 
+		                 String EladoID = elem2.getAttribute("EladoID");
+		                 
+		                 Node n2 = elem2.getElementsByTagName("fhsznev").item(0);
+		                 String fhsznev = n2.getTextContent();
+		                 
+		                 if(EladoID.equals(Elado_IDREF)) {
+		                	 
+		                	 for (int k = 0; k < dolgoziklist.getLength(); k++) {
+			                	 
+			                	 Node nNode3 = dolgoziklist.item(k);
+			                	 
+			                	 
+			             		
+					             if (nNode3.getNodeType() == Node.ELEMENT_NODE) {
+					            	 
+					            	 Element elem3 = (Element) nNode3;
+					            	 
+					            	 String Mozi_IDREF = elem3.getAttribute("Mozi_IDREF");
+					                 
+					            	 String DElado_IDREF = elem3.getAttribute("Elado_IDREF");
+					            	 
+					            	 if(Elado_IDREF.equals(DElado_IDREF)) {
+							        	 
+					            		 
+					            		 for (int l = 0; l < mozilist.getLength(); l++) {
+					            			 
+					            			 Node nNode4 = mozilist.item(l);
+							             		
+								             if (nNode4.getNodeType() == Node.ELEMENT_NODE) {
+								            	 
+								            	 Element elem4 = (Element) nNode4;
+								            	 
+								            	 String MoziID = elem4.getAttribute("MoziID");
+								            	 
+								            	 Node n3 = elem4.getElementsByTagName("mozinev").item(0);
+								                 String mozinev = n3.getTextContent(); 
+								                 
+								                 if(Mozi_IDREF.equals(MoziID)) {
+								               
+									            	 System.out.println("Vásárlási azonositó: " + VasarlasID);
+									            	 System.out.println("Jegy azonositója: " + Jegy_IDREF);
+									            	 System.out.println("Vásárlás idõpontja: " + vidopont);
+									            	 System.out.println("Eladó felhasználóneve: " + fhsznev);
+									            	 System.out.println("Mozi neve: " + mozinev);
+								                 }
+								             }
+					            		 }
+		 
+							         }
+
+					             }
+			              
+			                 } 
+		                 }
+
+		             }
+		         }
+        	}   
+        }
+
     }
 }
