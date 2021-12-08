@@ -28,7 +28,7 @@ public class DomModifyVUXFKS {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
             Document doc = docBuilder.parse(inputFile);
-           
+            Node root = doc.getFirstChild();
 
           // Modositjuk az összes eladó jelszavát "ujjelszo0"-ra annak aki nem rendelkezik admin joggal
             NodeList eladoList = doc.getElementsByTagName("elado");
@@ -58,6 +58,17 @@ public class DomModifyVUXFKS {
                     }
                 }
             }
+            
+            NodeList dolgoznak = root.getChildNodes();
+            for (int i = 0; i < dolgoznak.getLength(); i++) {
+                
+            	Node n1 = dolgoznak.item(i);
+
+                if (n1.getNodeName().equals("dolgoznak"))
+                    root.removeChild(n1);
+            }
+            
+            
             
             modify(doc);
             
